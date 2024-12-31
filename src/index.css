@@ -1,0 +1,142 @@
+body {
+  font-family: "Hanken Grotesk";
+  background-color: #282726;
+  color: white;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+}
+header {
+  text-align: center;
+}
+header h1 {
+  font-size: 1.5rem;
+}
+header p {
+  font-size: 1rem;
+  color: rgb(172, 172, 172);
+  text-align: center;
+  margin-top: 0.6rem;
+}
+/*  */
+.game-status {
+  /* background-color: #10a95b; */
+  min-height: 3.7rem;
+  padding: 0.3rem 3rem;
+  margin-block: 2rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.game-status.won {
+  background-color: #10a95b;
+}
+.game-status.lost {
+  background-color: #ba2a2a;
+}
+.game-status.farewell {
+  background-color: #7a5ea7;
+  border: 1px dashed #323232;
+}
+
+.game-status h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+.game-status p {
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.lang-chips {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  /* max-width: 600px; */
+}
+
+.lang-chips span {
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  position: relative;
+}
+.lang-chips span.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.letter-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-block: 2rem;
+  gap: 10px;
+}
+
+.letter-boxes span {
+  font-size: 1.5rem;
+  background-color: #323232;
+  border-bottom: 2px solid #f9f4da;
+  padding: 0.3rem 1rem;
+  text-transform: uppercase;
+  min-height: 40px;
+}
+.letter-boxes span.missed-letter {
+  color: #ec5d49;
+}
+
+.keyboard-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 700px;
+  /* i don't know why the width is not working properly, that is why I am adding a max width */
+}
+.keyboard-boxes button {
+  font-family: "Hanken Grotesk";
+  font-size: 1.1rem;
+  border: 1px solid #f9f4da;
+  background-color: #fcba29;
+  border-radius: 4px;
+  font-weight: 800;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+
+.keyboard-boxes button.correct {
+  background-color: #10a95b;
+}
+
+.keyboard-boxes button.wrong {
+  background-color: #ec5d49;
+}
+
+button.new-game {
+  margin-top: 3rem;
+  background-color: #11b5e5;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  width: 225px;
+  height: 40px;
+  padding: 6px 12px;
+  display: block;
+  margin-inline: auto;
+  cursor: pointer;
+}
